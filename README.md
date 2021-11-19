@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# CodeAcademy React Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Done by:** Žilvinas Kančys
 
 ## Available Scripts
 

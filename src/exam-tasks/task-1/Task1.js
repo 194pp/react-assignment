@@ -1,9 +1,27 @@
 import React from 'react';
+import {NavLink, Route, Routes, useNavigate} from "react-router-dom";
+import classes from './Task1.module.css';
+import AboutUs from "./Pages/AboutUs";
+import Contacts from "./Pages/Contacts";
 
 function Task1() {
+  const navigate = useNavigate();
+
+  const navLinkClassHandler = (navData) => {
+    return navData.isActive ? classes.Active : '';
+  }
+
   return (
-    <div>
-      <h3>Task 1</h3>
+    <div className={classes.Task}>
+      <nav className={classes.Nav}>
+        <NavLink to='/task1/about-us'>About us</NavLink>
+        <NavLink to='/task1/contacts'>Contacts</NavLink>
+      </nav>
+      <Routes>
+        <Route path='/about-us' element={<AboutUs pageClass={classes.Page}/>}/>
+        <Route path='/contacts' element={<Contacts pageClass={classes.Page}/>}/>
+      </Routes>
+      <button className={classes.BackBtn} onClick={() => navigate(-1)}>Go back</button>
     </div>
   );
 }

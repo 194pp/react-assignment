@@ -1,0 +1,12 @@
+.LinkItem {
+  color: black;
+  text-decoration: none;
+  padding: 2px;
+  transition: all 500ms ease;
+}
+
+.Active {
+  text-decoration: underline;
+  color: dodgerblue;
+  font-size: 20px;
+}

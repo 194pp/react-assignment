@@ -1,0 +1,26 @@
+.App {
+  display: inline-block;
+  /*min-width: 500px;*/
+  margin: 0.5rem;
+  padding: 8px;
+  border: black 1px solid;
+}
+
+.Header {
+  margin: 0 2rem;
+}
+
+.App > div {
+  animation: appear 1.2s 1;
+}
+
+@keyframes appear {
+  from {
+    transform: scaleY(0) scaleX(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}
