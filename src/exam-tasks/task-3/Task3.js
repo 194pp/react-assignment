@@ -1,9 +1,11 @@
 import React from 'react';
+import Task3Form from "./Task3Form";
+import classes from './Task3.module.css';
 
 function Task3() {
   return (
-    <div>
-      <h3>Task 3</h3>
+    <div className={classes.Task}>
+      <Task3Form />
     </div>
   );
 }

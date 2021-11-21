@@ -7,10 +7,6 @@ import Contacts from "./Pages/Contacts";
 function Task1() {
   const navigate = useNavigate();
 
-  const navLinkClassHandler = (navData) => {
-    return navData.isActive ? classes.Active : '';
-  }
-
   return (
     <div className={classes.Task}>
       <nav className={classes.Nav}>

@@ -1,0 +1,51 @@
+.Task {
+
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.InputContainer {
+  display: flex;
+}
+
+.InputLabel {
+  width: 80px;
+}
+
+.InputIn {
+  border: dodgerblue 2px solid;
+  transition: all 500ms ease;
+}
+
+.InputIn:focus {
+  transform: scale(1.05);
+  border: #1e5eff 3px solid;
+  outline: none;
+}
+
+.SubmitBtn {
+  display: inline-block;
+  background-color: white;
+  border: dodgerblue 2px solid;
+  border-radius: 0;
+  margin: 0.5rem;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+}
+
+.ErrorsGreeting {
+  font-weight: bold;
+}
+
+.Error {
+  color: red;
+}
+
+.Greeting {
+  color: green;
+}
