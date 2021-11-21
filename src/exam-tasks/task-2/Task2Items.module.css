@@ -1,0 +1,14 @@
+.ItemsList {
+  display: flex;
+  gap: 1rem;
+}
+
+.ItemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ItemContainer > img {
+  width: 100px;
+}

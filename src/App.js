@@ -16,20 +16,22 @@ import TaskBundle from "./GlobalComponents/TaskBundle";
 
 function App() {
   return (
-    <div className={classes.App}>
-      <h1 className={classes.Header}>
-        React Assignment
-      </h1><hr />
-      <TaskBundle path='/task1' text='Task 1' elem={<Task1 />} />
-      <TaskBundle path='/task2' text='Task 2' elem={<Task2 />} />
-      <TaskBundle path='/task3' text='Task 3' elem={<Task3 />} />
-      <TaskBundle path='/task4' text='Task 4' elem={<Task4 />} />
-      <TaskBundle path='/task5' text='Task 5' elem={<Task5 />} />
-      <TaskBundle path='/task6' text='Task 6' elem={<Task6 />} />
-      <TaskBundle path='/task7' text='Task 7' elem={<Task7 />} />
-      <TaskBundle path='/task8' text='Task 8' elem={<Task8 />} />
-      <TaskBundle path='/task9' text='Task 9' elem={<Task9 />} />
-      <TaskBundle path='/task10' text='Task 10' elem={<Task10 />} />
+    <div className={classes.AppBorder}>
+      <div className={classes.App}>
+        <h1 className={classes.Header}>
+          React Assignment
+        </h1><hr />
+        <TaskBundle path='/task1' text='Task 1' elem={<Task1 />} />
+        <TaskBundle path='/task2' text='Task 2' elem={<Task2 />} />
+        <TaskBundle path='/task3' text='Task 3' elem={<Task3 />} />
+        <TaskBundle path='/task4' text='Task 4' elem={<Task4 />} />
+        <TaskBundle path='/task5' text='Task 5' elem={<Task5 />} />
+        <TaskBundle path='/task6' text='Task 6' elem={<Task6 />} />
+        <TaskBundle path='/task7' text='Task 7' elem={<Task7 />} />
+        <TaskBundle path='/task8' text='Task 8' elem={<Task8 />} />
+        <TaskBundle path='/task9' text='Task 9' elem={<Task9 />} />
+        <TaskBundle path='/task10' text='Task 10' elem={<Task10 />} />
+      </div>
     </div>
   );
 }

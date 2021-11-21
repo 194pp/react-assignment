@@ -1,26 +1,40 @@
 .App {
   display: inline-block;
-  /*min-width: 500px;*/
-  margin: 0.5rem;
+  background: white;
   padding: 8px;
-  border: black 1px solid;
+  transition: all 0.5s ease;
+}
+
+.AppBorder {
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(#0000FF, #7FFFD4);
+  margin: 1rem;
+  transition: all 0.5s ease;
 }
 
 .Header {
   margin: 0 2rem;
+  text-align: center;
 }
 
 .App > div {
-  animation: appear 1.2s 1;
+  animation: appear 0.5s 1;
+}
+
+@keyframes borderAnimation {
+  0% {
+
+  }
 }
 
 @keyframes appear {
   from {
-    transform: scaleY(0) scaleX(0.5);
+    transform: translateX(50px);
     opacity: 0;
   }
   to {
-    transform: scaleY(1) scaleX(1);
+    transform: translateX(0);
     opacity: 1;
   }
 }
