@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import Task6Table from "./Task6Table";
+
+const URL = 'https://jsonplaceholder.typicode.com/users';
 
 function Task6() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(URL)
+      .then(resp => resp.json())
+      .then(data => setData(data));
+  }, [])
+
   return (
     <div>
-      <h3>Task 6</h3>
+      <Task6Table data={data}/>
     </div>
   );
 }
