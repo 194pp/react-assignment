@@ -1,9 +1,15 @@
-import React from 'react';
+import classes from './Task5.module.css';
+import Task5Logo from "./Task5Logo";
+import Task5Button from "./Task5Button";
 
 function Task5() {
   return (
-    <div>
-      <h3>Task 5</h3>
+    <div className={classes.Task}>
+      <Task5Logo />
+      <h1>Happening now</h1>
+      <h3>Join Twitter today.</h3>
+      <Task5Button solid={true}>Sign up</Task5Button>
+      <Task5Button>Log in</Task5Button>
     </div>
   );
 }
