@@ -1,0 +1,45 @@
+.Task {
+  color: #909090;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.IconWithSpan {
+  display: flex;
+  align-items: center;
+}
+
+.Icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.Icon:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  transition: all 100ms;
+}
+
+.Icon:active:after {
+  transform: scale(1);
+  background-color: dodgerblue;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  border-radius: 1000px;
+  transition: 0s;
+}
+
+
+.Span {
+  margin-left: 2px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.Active {
+  color: dodgerblue;
+  transition-duration: 500ms;
+}
