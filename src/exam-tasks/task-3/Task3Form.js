@@ -2,11 +2,10 @@ import Task3FormInput from "./Task3FormInput";
 import classes from './Task3.module.css';
 import {useEffect, useState} from "react";
 
-const Task3Form = () => {
+const Task3Form = ({errorsState, setErrorsState, setLoggedIn}) => {
   const [firstNameState, setFirstNameState] = useState('');
   const [lastNameState, setLastNameState] = useState('');
   const [ageState, setAgeState] = useState('');
-  const [errorsState, setErrorsState] = useState([]);
 
   const inputChangeHandler = {
     firstName: (e) => {
@@ -78,6 +77,7 @@ const Task3Form = () => {
         setFirstNameState('');
         setLastNameState('');
         setAgeState('');
+        setLoggedIn(true);
       }
     }
   }
@@ -108,12 +108,6 @@ const Task3Form = () => {
         change={inputChangeHandler.age}
       />
       <button className={classes.SubmitBtn}>Pateikti</button>
-      <div className={classes.ErrorsGreeting}>
-        {errorsState.map(error => {
-          return <div className={classes.Error} key={error}>{error}</div>
-        })}
-        {errorsState.length === 0 ? <div className={classes.Greeting}>Dėkojame, kad užsiregistravote.</div> : ''}
-      </div>
     </form>
   )
 }
