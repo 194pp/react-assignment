@@ -20,10 +20,10 @@ function Task4() {
   }
   const dislikeClickHandler = (e) => {
     if (!disliked) {
-      setDislikes(() => dislikes + 1);
+      setDislikes(dislikes => dislikes + 1);
     }
     if (liked) {
-      setLikes(() => likes - 1);
+      setLikes(likes => likes - 1);
     }
     setDisliked(true);
     setLiked(false);
