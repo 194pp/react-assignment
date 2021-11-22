@@ -7,6 +7,10 @@ import Contacts from "./Pages/Contacts";
 function Task1() {
   const navigate = useNavigate();
 
+  const backButtonHandler = () => {
+    navigate(-1);
+  }
+
   return (
     <div className={classes.Task}>
       <nav className={classes.Nav}>
@@ -14,10 +18,23 @@ function Task1() {
         <NavLink to='/task1/contacts'>Contacts</NavLink>
       </nav>
       <Routes>
-        <Route path='/about-us' element={<AboutUs pageClass={classes.Page}/>}/>
-        <Route path='/contacts' element={<Contacts pageClass={classes.Page}/>}/>
+        <Route
+          path='/about-us'
+          element={
+            <AboutUs
+              pageClass={classes.Page}
+              click={backButtonHandler}
+            />}
+        />
+        <Route
+          path='/contacts'
+          element={
+            <Contacts
+              pageClass={classes.Page}
+              click={backButtonHandler}
+            />}
+        />
       </Routes>
-      <button className={classes.BackBtn} onClick={() => navigate(-1)}>Go back</button>
     </div>
   );
 }
