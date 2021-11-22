@@ -1,0 +1,12 @@
+.Task {
+  padding: 0.5rem;
+}
+
+.Table {
+  background: linear-gradient(red, dodgerblue);
+}
+
+.Table th {
+  background-color: white;
+  padding: 0 4px;
+}
