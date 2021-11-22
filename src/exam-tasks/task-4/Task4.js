@@ -36,12 +36,12 @@ function Task4() {
     <div className={classes.Task}>
       <Task4Icon
         icon='thumb_up'
-        state={state.isLiked}
+        active={state.isLiked}
         count={state.likes}
         click={likeClickHandler}/>
       <Task4Icon
         icon='thumb_down'
-        state={!state.isLiked && state.isLiked !== undefined}
+        active={!state.isLiked && state.isLiked !== undefined}
         count={state.dislikes}
         click={dislikeClickHandler}/>
     </div>
