@@ -11,10 +11,6 @@ export const CounterContext = createContext({
 function Task8() {
   const [counter, setCounter] = useState(0);
 
-  useEffect(() => {
-    console.log(counter);
-  }, [counter])
-
   return (
     <CounterContext.Provider value={{counter, setCounter}}>
       <div className={classes.Task}>
