@@ -1,9 +1,37 @@
-import React from 'react';
+import classes from './Task7.module.css';
+import {useRef, useState} from "react";
 
 function Task7() {
+  const taskRef = useRef(classes.TaskLight)
+
+  const btnLightClickHandler = () => {
+    taskRef.current.className = `${classes.Task} ${classes.TaskLight}`;
+  }
+
+  const btnDarkClickHandler = () => {
+    taskRef.current.className = `${classes.Task} ${classes.TaskDark}`;
+  }
+
   return (
-    <div>
-      <h3>Task 7</h3>
+    <div ref={taskRef} className={classes.Task}>
+      <h1>Header</h1>
+      <p>Paragraph</p>
+      <div className={classes.Buttons}>
+        <button
+          className={classes.BtnLight}
+          onClick={btnLightClickHandler}
+        >
+          Light theme
+          <span className="material-icons">light_mode</span>
+        </button>
+        <button
+          className={classes.BtnDark}
+          onClick={btnDarkClickHandler}
+        >
+          Dark theme
+          <span className="material-icons">dark_mode</span>
+        </button>
+      </div>
     </div>
   );
 }

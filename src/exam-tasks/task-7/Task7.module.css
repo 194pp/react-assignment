@@ -1,0 +1,39 @@
+.Task {
+  transition-duration: 0.5s;
+}
+
+.TaskLight {
+  background-color: #f1f1f1;
+  color: #000000;
+}
+
+.TaskDark {
+  background-color: #000000;
+  color: #f1f1f1;
+}
+
+.Buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.Buttons > button {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: #dedede;
+  border: none;
+  border-radius: 100px;
+  padding: 0.25rem 0.5rem;
+  transition-duration: 0.5s;
+}
+
+.BtnLight:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.BtnDark:hover {
+  background-color: black;
+  color: white;
+}
