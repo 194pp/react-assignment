@@ -1,38 +1,49 @@
-import React, {useState} from 'react';
+import React, {useReducer, useState} from 'react';
 import Task4Icon from "./Task4Icon";
 import classes from './Task4.module.css';
 
-function Task4() {
-  const [likes, setLikes] = useState(12);
-  const [dislikes, setDislikes] = useState(2);
-  const [liked, setLiked] = useState(false);
-  const [disliked, setDisliked] = useState(false);
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'LIKE':
+      if (state.isLiked) return state;
+      return {
+        likes: state.likes + 1,
+        dislikes: state.isLiked !== undefined ? state.dislikes - 1 : state.dislikes,
+        isLiked: true
+      }
+    case 'DISLIKE':
+      if (state.isLiked === false) return state;
+      return {
+        likes: state.isLiked !== undefined ? state.likes - 1 : state.likes,
+        dislikes:  state.dislikes + 1,
+        isLiked: false
+      }
+    default: return state;
+  }
+}
 
-  const likeClickHandler = (e) => {
-    if (!liked) {
-      setLikes(() => likes + 1);
-    }
-    if (disliked) {
-      setDislikes(() => dislikes -1);
-    }
-    setLiked(true);
-    setDisliked(false);
-  }
-  const dislikeClickHandler = (e) => {
-    if (!disliked) {
-      setDislikes(dislikes => dislikes + 1);
-    }
-    if (liked) {
-      setLikes(likes => likes - 1);
-    }
-    setDisliked(true);
-    setLiked(false);
-  }
+function Task4() {
+  const [state, dispatch] = useReducer(reducer, {
+    likes: 12,
+    dislikes: 2,
+    isLiked: undefined
+  })
+
+  const likeClickHandler = () => dispatch({type: 'LIKE'});
+  const dislikeClickHandler = () => dispatch({type: 'DISLIKE'});
 
   return (
     <div className={classes.Task}>
-      <Task4Icon icon='thumb_up' state={liked} count={likes} click={likeClickHandler}/>
-      <Task4Icon icon='thumb_down' state={disliked} count={dislikes} click={dislikeClickHandler}/>
+      <Task4Icon
+        icon='thumb_up'
+        state={state.isLiked}
+        count={state.likes}
+        click={likeClickHandler}/>
+      <Task4Icon
+        icon='thumb_down'
+        state={!state.isLiked && state.isLiked !== undefined}
+        count={state.dislikes}
+        click={dislikeClickHandler}/>
     </div>
   );
 }
