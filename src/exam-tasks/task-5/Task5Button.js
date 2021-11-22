@@ -1,10 +1,10 @@
 import classes from './Task5.module.css';
 
-const Task5Button = ({solid, children}) => {
+const Task5Button = ({className, text}) => {
   return (
     <button
-      className={`${classes.Button} ${solid ? classes.ButtonSolid : ''}`}>
-      {children}
+      className={className}>
+      {text}
     </button>
   )
 }

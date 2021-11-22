@@ -8,8 +8,14 @@ function Task5() {
       <Task5Logo />
       <h1>Happening now</h1>
       <h3>Join Twitter today.</h3>
-      <Task5Button solid={true}>Sign up</Task5Button>
-      <Task5Button>Log in</Task5Button>
+      <Task5Button
+        className={classes.Button + ' ' + classes.ButtonSolid}
+        text='Sign up'
+      />
+      <Task5Button
+        className={classes.Button}
+        text='Log in'
+      />
     </div>
   );
 }
