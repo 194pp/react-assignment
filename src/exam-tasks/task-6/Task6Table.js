@@ -15,7 +15,7 @@ const Task6Table = ({data}) => {
       </tr>
       {data.map(item => {
         return (
-          <tr>
+          <tr key={item.name}>
             <th>{item.name}</th>
             <th>{item.email}</th>
             <th>{`${item.address.street}, ${item.address.city}`}</th>
