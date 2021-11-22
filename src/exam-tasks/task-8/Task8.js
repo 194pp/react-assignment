@@ -1,14 +1,30 @@
-import React from 'react';
 import CompA from './CompA';
 import CompB from './CompB';
+import classes from './Task8.module.css';
+import {createContext, useContext, useEffect, useState} from "react";
+
+export const CounterContext = createContext({
+  counter: 0,
+  setCounter: () => {}
+});
 
 function Task8() {
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    console.log(counter);
+  }, [counter])
+
   return (
-    <div>
-      <h3>Task 8</h3>
-      {/*<CompA />*/}
-      {/*<CompB />*/}
-    </div>
+    <CounterContext.Provider value={{counter, setCounter}}>
+      <div className={classes.Task}>
+        <div>
+          Counter: <span>{counter}</span>
+        </div>
+        <CompA />
+        <CompB />
+      </div>
+    </CounterContext.Provider>
   );
 }
 
