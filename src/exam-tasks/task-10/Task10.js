@@ -3,8 +3,8 @@ const Task10 = () => {
   return (
     <div>
       <h3>Joke:</h3>
-      <p>Why couldn’t the React component understand the joke?
-        Because it didn’t get the context.</p>
+      <p>Why couldn't the React component understand the joke?
+        Because it didn't get the context.</p>
       <h3>Explanation:</h3>
       <p>One of React's functionalities is called Context
         and it allows (no matter how deeply) nested components
